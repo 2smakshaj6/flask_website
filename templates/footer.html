@@ -3,7 +3,10 @@
       <a href="https://github.com/2smakshaj6" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/akshajsm" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://youtube.com/@blutreetechnologynetworks6518" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="mailto:akshajsh@buffalo.edu"><i class="fas fa-envelope"></i></a>
+      <a href="javascript:openEmail()" class="email-icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <!--<a href="mailto:akshajsh@buffalo.edu"><i class="fas fa-envelope"></i></a>-->
   </div>
   <div class="footer-divider"></div>
   <p>© <span id="current-year"></span> Akshaj Shivara Madhusudhan. All Rights Reserved.</p>
@@ -12,3 +15,31 @@
 <script>
 document.getElementById("current-year").textContent = new Date().getFullYear();
 </script>
+
+<script>
+  function openEmail() {
+      var email = "smakshaj@gmail.com"; // Your email
+      var subject = encodeURIComponent("Inquiry from Your Website");
+      var body = encodeURIComponent("Hello, I found your portfolio and would like to connect.");
+      window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+  }
+</script>
+
+<!-- Email Icon 
+<a href="javascript:copyAndOpenEmail()" class="email-icon">
+  <i class="fas fa-envelope"></i>
+</a>
+
+<script>
+  function copyAndOpenEmail() {
+      var email = "smakshaj@gmail.com"; // Your email
+      navigator.clipboard.writeText(email).then(function() {
+          alert("Email copied to clipboard: " + email);
+          // After copying, open the email client
+          window.location.href = "mailto:" + email + "?subject=Hello&body=I'd like to connect with you!";
+      }, function(err) {
+          console.error("Could not copy text: ", err);
+      });
+  }
+</script>
+-->

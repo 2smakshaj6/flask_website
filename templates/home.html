@@ -8,13 +8,19 @@
               <a href="https://github.com/2smakshaj6" target="_blank"><i class="fab fa-github"></i></a>
               <a href="https://linkedin.com/in/akshajsm" target="_blank"><i class="fab fa-linkedin"></i></a>
               <a href="https://youtube.com/@blutreetechnologynetworks6518" target="_blank"><i class="fab fa-youtube"></i></a>
-              <a href="javascript:showEmail()" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+              <a href="javascript:openEmail()" class="email-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+              <!--<a href="javascript:showEmail()" aria-label="Send Email"><i class="fas fa-envelope"></i></a>-->
 
              <!-- <a href="https://discord.gg/YOUR_DISCORD_INVITE" target="_blank"><i class="fab fa-discord"></i></a>-->
           </div>
           <div class="profile-buttons">
               <a href="#experience" class="scroll-btn">View My Work</a>
-              <a href="https://drive.google.com/" class="resume-btn" target="_blank">Download Resume</a>
+              <a href="https://drive.google.com/uc?export=download&id=1EdB81m1wxHCiDynnPexlkTOmKuWhtRDK" 
+   class="resume-btn" target="_blank" download>
+   Download Resume
+</a>
           </div>
       </div>
   </div>
@@ -28,13 +34,40 @@
   </div>
 </section>
 
-<!-- Secure Email Script -->
+<script>
+    function openEmail() {
+        var email = "smakshaj@gmail.com"; // Your email
+        var subject = encodeURIComponent("Inquiry from Your Website");
+        var body = encodeURIComponent("Hello, I found your portfolio and would like to connect.");
+        window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+    }
+</script>
+
+https://drive.google.com/file/d/1EdB81m1wxHCiDynnPexlkTOmKuWhtRDK/view?usp=drive_link
+<!-- Secure Email Script 
 <script>
     function showEmail() {
-        var email = atob("c21ha3NoYWpAZ21haWwuY29t"); // Encoded "smakshaj@gmail.com"
+        var email = atob("c21ha3NoYWpAZ21haWwuY29t"); 
         window.location.href = "mailto:" + email;
     }
   </script>
-  
-  <!-- Improved Contact Button -->
-  <a href="javascript:showEmail()" class="contact-btn">Contact Me</a>
+  -->
+  <!-- Improved Contact Button 
+  <a href="javascript:showEmail()" class="contact-btn">Contact Me</a>-->
+
+  <!-- Email Icon 
+<a href="javascript:copyEmail()" class="email-icon">
+    <i class="fas fa-envelope"></i>
+</a>
+
+<script>
+    function copyEmail() {
+        var email = "smakshaj@gmail.com"; // Your email
+        navigator.clipboard.writeText(email).then(function() {
+            alert("Email copied to clipboard: " + email);
+        }, function(err) {
+            console.error("Could not copy text: ", err);
+        });
+    }
+</script>
+-->
