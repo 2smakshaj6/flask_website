@@ -61,7 +61,6 @@
     color: #ffbf00;
   }
   
-/* < ================== Hamburger Icon ================== */  
 /* ================== Mobile Navbar (Hamburger Menu) ================== */
 @media (max-width: 768px) {
     .navbar {

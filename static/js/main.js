@@ -48,12 +48,12 @@ window.addEventListener("resize", function () {
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
 
-    if (menuToggle && navLinks) { // Ensure elements exist before adding event listener
-        menuToggle.addEventListener("click", function() {
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
             console.log("Hamburger menu clicked"); // Debugging
             navLinks.classList.toggle("active"); // Toggle menu visibility
         });
@@ -69,3 +69,4 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Error: Menu Toggle or Nav Links not found in DOM.");
     }
 });
+
