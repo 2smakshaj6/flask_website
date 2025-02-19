@@ -1,26 +1,21 @@
-<section id class="navbar">
+<section id="navbar" class="navbar">
   <div class="navbar-brand">
-    <a href="#home"></a>
-    <img src="{{ url_for('static', filename='assets/images/ak_logo.png') }}" alt="Logo">
+    <a href="#home">
+      <img src="{{ url_for('static', filename='assets/images/ak_logo.png') }}" alt="Logo">
+    </a>
   </div>
 
-    <!-- Hamburger Menu Icon -->
-    <nav>
-      <div class="hamburger-menu" id="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+  <!-- Hamburger Menu Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+  </div>
 
   <nav class="nav-container">
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#academia">Academia</a></li>
       <li><a href="#projects">Projects</a></li>
-      <!--<li><a href="#blogs">Blogs</a></li>-->
     </ul>
   </nav>
-
 </section>

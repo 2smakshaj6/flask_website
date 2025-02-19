@@ -48,19 +48,37 @@ window.addEventListener("resize", function () {
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const hamburgerMenu = document.getElementById("hamburger-menu");
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
+    const navItems = document.querySelectorAll(".nav-links a"); // Select all nav links
 
-    hamburgerMenu.addEventListener("click", function() {
-        hamburgerMenu.classList.toggle("active");
-        navLinks.classList.toggle("active");
-    });
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+            console.log("Hamburger menu clicked"); // Debugging
+            navLinks.classList.toggle("active"); // Toggle menu visibility
+        });
 
-    // Close the menu when a navigation link is clicked
-    // document.querySelectorAll(".nav-links a").forEach(link => {
-    //     link.addEventListener("click", () => {
-    //         navLinks.classList.remove("active");
-    //     });
-    // });
+        // Close menu when clicking a link & enable smooth scrolling
+        navItems.forEach(link => {
+            link.addEventListener("click", (event) => {
+                console.log("Menu link clicked", link.getAttribute("href")); // Debugging
+                navLinks.classList.remove("active"); // Hide menu
+
+                // Ensure smooth scrolling to section
+                const targetId = link.getAttribute("href");
+                if (targetId.startsWith("#")) {
+                    event.preventDefault(); // Prevent default anchor jump
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    } else {
+        console.error("Error: Menu Toggle or Nav Links not found in DOM.");
+    }
 });
+
+
+
