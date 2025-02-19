@@ -53,14 +53,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.getElementById("nav-links");
 
     hamburgerMenu.addEventListener("click", function() {
+        hamburgerMenu.classList.toggle("active");
         navLinks.classList.toggle("active");
     });
 
     // Close the menu when a navigation link is clicked
-    document.querySelectorAll(".nav-links a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-        });
-    });
+    // document.querySelectorAll(".nav-links a").forEach(link => {
+    //     link.addEventListener("click", () => {
+    //         navLinks.classList.remove("active");
+    //     });
+    // });
 });
-
