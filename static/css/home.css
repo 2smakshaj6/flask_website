@@ -175,13 +175,16 @@ section {
         margin: auto;
     }      
 
-    /* Fix Profile Image Size */
+    /* Fix Profile Picture */
     .profile-pic {
-        width: 200px;
-        height: 200px;
+        width: 250px; /* Ensure square */
+        height: 250px;
         object-fit: cover;
-        border-radius: 50%;
+        border-radius: 20px; /* No oval effect */
+        border: 3px solid white;
+        box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
     }
+
 
     /* About Me Section Fix */
     .about-me {
@@ -208,5 +211,12 @@ section {
     .profile-buttons {
         flex-direction: column;
         gap: 10px;
+    }
+    /* Fix Social Icons Alignment */
+    .social-icons {
+        display: flex;
+        justify-content: center; /* Center align */
+        gap: 15px;
+        margin-top: 10px;
     }
 }

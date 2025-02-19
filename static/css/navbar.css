@@ -62,49 +62,33 @@
   }
   
   /* ================== Mobile Navbar (Hidden by Default) ================== */
-.nav-toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1100;
-}
-
+/* Mobile Navbar */
 @media (max-width: 768px) {
-    /* Add Padding to Fix Overlap */
-    body {
-        padding-top: 80px; /* Adjust based on navbar height */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 12px;
+        z-index: 1000;
     }
 
-    .nav-toggle {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
     }
 
     .nav-links {
-        display: none;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
+        display: none; /* Initially hidden */
         position: absolute;
         top: 60px;
-        right: 20px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
         width: 200px;
-        border-radius: 10px;
-        padding: 10px;
-        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 1001;
     }
 
     .nav-links.active {
         display: flex;
-    }
-
-    .nav-links a {
-        text-align: center;
-        padding: 10px;
-        font-size: 1.1rem;
     }
 }
