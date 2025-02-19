@@ -32,14 +32,18 @@ window.addEventListener("resize", function () {
     );
 });
 
-// ================== Navbar Toggle for Small Screens ==================
-const navbarToggle = document.createElement("button");
-navbarToggle.innerHTML = "☰"; // Burger icon
-navbarToggle.classList.add("navbar-toggle");
+// ================== Mobile Navbar Toggle ==================
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.createElement("button");
+    toggleButton.innerHTML = "☰"; // Hamburger Icon
+    toggleButton.classList.add("nav-toggle");
 
-// Add toggle button before the navbar
-document.querySelector(".navbar").insertBefore(navbarToggle, document.querySelector(".nav-links"));
+    // Insert toggle button inside navbar
+    const navbar = document.querySelector(".navbar");
+    navbar.appendChild(toggleButton);
 
-navbarToggle.addEventListener("click", () => {
-    document.querySelector(".nav-links").classList.toggle("active");
+    // Toggle menu when clicked
+    toggleButton.addEventListener("click", function () {
+        document.querySelector(".nav-links").classList.toggle("active");
+    });
 });

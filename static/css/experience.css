@@ -141,3 +141,37 @@ p.timeline {
     background: var(--button-bg);
     color: black;
 }
+
+/* ================== Responsive Sections ================== */
+section {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Reduce Section Size on Mobile */
+@media (max-width: 768px) {
+    section {
+        padding: 50px 5%;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 250px;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .profile-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
