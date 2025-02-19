@@ -6,7 +6,7 @@
     justify-content: center;
     text-align: center;
     height: 100vh;
-    padding: 100px 40px;
+    padding: 200px 40px 100px; /* Increased top padding */
     position: relative;
     /* background: #000000; Pure black */
     overflow: hidden;
@@ -97,6 +97,7 @@
 .about-me {
     margin-top: 100px;
     text-align: center;
+    max-width: 1000px
     
 }
 
@@ -108,10 +109,10 @@
 
 .about-me p {
     text-align: justify;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #d1d1d1;
     line-height: 1.6;
-    max-width: 800px;
+    max-width: 1000px; /* Expands text area */
     margin: auto;
 }
 
