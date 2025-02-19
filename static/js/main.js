@@ -33,21 +33,6 @@ window.addEventListener("resize", function () {
 });
 
 // ================== Mobile Navbar Toggle ==================
-// document.addEventListener("DOMContentLoaded", function () {
-//     const toggleButton = document.createElement("button");
-//     toggleButton.innerHTML = "☰"; // Hamburger Icon
-//     toggleButton.classList.add("nav-toggle");
-
-//     // Insert toggle button inside navbar
-//     const navbar = document.querySelector(".navbar");
-//     navbar.appendChild(toggleButton);
-
-//     // Toggle menu when clicked
-//     toggleButton.addEventListener("click", function () {
-//         document.querySelector(".nav-links").classList.toggle("active");
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
@@ -79,6 +64,24 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error: Menu Toggle or Nav Links not found in DOM.");
     }
 });
+
+// ================== Disable F12 & Right Click ==================
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && (event.key === 'u' || event.key === 'U')) {
+        event.preventDefault();
+    }
+    if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J' || event.key === 'C')) {
+        event.preventDefault();
+    }
+    if (event.key === 'F12') {
+        event.preventDefault();
+    }
+});
+
+
+
 
 
 

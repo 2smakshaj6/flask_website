@@ -8,7 +8,8 @@
               <a href="https://github.com/2smakshaj6" target="_blank"><i class="fab fa-github"></i></a>
               <a href="https://linkedin.com/in/akshajsm" target="_blank"><i class="fab fa-linkedin"></i></a>
               <a href="https://youtube.com/@blutreetechnologynetworks6518" target="_blank"><i class="fab fa-youtube"></i></a>
-              <a href="mailto:akshajsh@buffalo.edu"><i class="fas fa-envelope"></i></a>
+              <a href="javascript:showEmail()" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+
              <!-- <a href="https://discord.gg/YOUR_DISCORD_INVITE" target="_blank"><i class="fab fa-discord"></i></a>-->
           </div>
           <div class="profile-buttons">
@@ -27,3 +28,13 @@
   </div>
 </section>
 
+<!-- Secure Email Script -->
+<script>
+    function showEmail() {
+        var email = atob("c21ha3NoYWpAZ21haWwuY29t"); // Encoded "smakshaj@gmail.com"
+        window.location.href = "mailto:" + email;
+    }
+  </script>
+  
+  <!-- Improved Contact Button -->
+  <a href="javascript:showEmail()" class="contact-btn">Contact Me</a>

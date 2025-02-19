@@ -116,6 +116,22 @@
     margin: auto;
 }
 
+.contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background-color: black;
+    color: gold;
+}
+
 /* ================== Responsive Design ================== */
 @media (max-width: 768px) {
     .profile-container {
