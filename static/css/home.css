@@ -150,8 +150,47 @@ section {
     section {
         padding: 50px 5%;
     }
+    /* Home Section */
+    #home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding: 100px 40px;
+        position: relative;
+        background: #000;
+        overflow: hidden;
+    }
 
+    /* Fix Profile Container on Mobile */
     .profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        max-width: 90%;
+        margin: auto;
+    }      
+
+    /* Fix Profile Image Size */
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    /* About Me Section Fix */
+    .about-me {
+        width: 90%;
+        text-align: justify;
+    }
+
+
+    /* .profile-container {
         flex-direction: column;
         text-align: center;
         gap: 20px;
@@ -160,7 +199,7 @@ section {
     .profile-pic {
         width: 200px;
         height: 250px;
-    }
+    } */
 
     .profile-info h1 {
         font-size: 2rem;

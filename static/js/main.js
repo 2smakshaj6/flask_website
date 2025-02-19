@@ -33,17 +33,34 @@ window.addEventListener("resize", function () {
 });
 
 // ================== Mobile Navbar Toggle ==================
+// document.addEventListener("DOMContentLoaded", function () {
+//     const toggleButton = document.createElement("button");
+//     toggleButton.innerHTML = "☰"; // Hamburger Icon
+//     toggleButton.classList.add("nav-toggle");
+
+//     // Insert toggle button inside navbar
+//     const navbar = document.querySelector(".navbar");
+//     navbar.appendChild(toggleButton);
+
+//     // Toggle menu when clicked
+//     toggleButton.addEventListener("click", function () {
+//         document.querySelector(".nav-links").classList.toggle("active");
+//     });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.createElement("button");
-    toggleButton.innerHTML = "☰"; // Hamburger Icon
-    toggleButton.classList.add("nav-toggle");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
 
-    // Insert toggle button inside navbar
-    const navbar = document.querySelector(".navbar");
-    navbar.appendChild(toggleButton);
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 
-    // Toggle menu when clicked
-    toggleButton.addEventListener("click", function () {
-        document.querySelector(".nav-links").classList.toggle("active");
+    // Close menu when clicking on a nav item
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
     });
 });

@@ -149,6 +149,19 @@ section {
     margin: 0 auto;
 }
 
+/* Ensure Cards Stack on Mobile */
+@media (max-width: 768px) {
+    .experience-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .flip-card {
+        width: 100%;
+    }
+}
+
 /* Reduce Section Size on Mobile */
 @media (max-width: 768px) {
     section {

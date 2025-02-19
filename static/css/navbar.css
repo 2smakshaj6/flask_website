@@ -73,6 +73,11 @@
 }
 
 @media (max-width: 768px) {
+    /* Add Padding to Fix Overlap */
+    body {
+        padding-top: 80px; /* Adjust based on navbar height */
+    }
+
     .nav-toggle {
         display: block;
         position: absolute;
