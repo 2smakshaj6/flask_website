@@ -52,15 +52,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
 
-    // Toggle menu on click
-    menuToggle.addEventListener("click", function() {
-        navLinks.classList.toggle("active");
-    });
-
-    // Close menu when clicking a link (for smooth navigation)
-    document.querySelectorAll(".nav-links a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
+    if (menuToggle && navLinks) { // Ensure elements exist before adding event listener
+        menuToggle.addEventListener("click", function() {
+            console.log("Hamburger menu clicked"); // Debugging
+            navLinks.classList.toggle("active"); // Toggle menu visibility
         });
-    });
+
+        // Close menu when clicking a link
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                console.log("Menu link clicked"); // Debugging
+                navLinks.classList.remove("active"); // Hide menu after clicking a link
+            });
+        });
+    } else {
+        console.error("Error: Menu Toggle or Nav Links not found in DOM.");
+    }
 });

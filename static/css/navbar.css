@@ -62,18 +62,7 @@
   }
   
 /* < ================== Hamburger Icon ================== */  
-/* Hamburger Icon - Hidden on Desktop */
-.menu-toggle {
-    display: none; /* Default - hidden */
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    background: transparent;
-    border: none;
-}
-
-/* Mobile Navbar */
+/* ================== Mobile Navbar (Hamburger Menu) ================== */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
@@ -83,9 +72,10 @@
     }
 
     .menu-toggle {
-        display: block; /* Show hamburger on mobile */
-        align-items: right;
-        justify-content: right;
+        display: block; /* Show hamburger icon */
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
     }
 
     .nav-links {
@@ -100,17 +90,13 @@
         border-radius: 8px;
         z-index: 1001;
     }
-    
+
     .nav-links.active {
-        display: flex !important;
-        flex-direction: column;
-        text-align: right;
+        display: flex;
     }
 
-    .nav-links a {
-        display: block;
-        padding: 10px;
-        color: white;
-        text-align: right;
+    /* Fix Profile Picture Being Covered */
+    #home {
+        padding-top: 100px; /* Adjust to move content below navbar */
     }
 }
