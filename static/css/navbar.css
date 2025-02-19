@@ -84,6 +84,8 @@
 
     .menu-toggle {
         display: block; /* Show hamburger on mobile */
+        align-items: right;
+        justify-content: right;
     }
 
     .nav-links {
@@ -98,9 +100,9 @@
         border-radius: 8px;
         z-index: 1001;
     }
-
+    
     .nav-links.active {
-        display: flex; /* Show menu when active */
+        display: flex !important;
         flex-direction: column;
         text-align: right;
     }
