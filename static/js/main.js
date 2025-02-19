@@ -48,25 +48,19 @@ window.addEventListener("resize", function () {
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.getElementById("hamburger-menu");
     const navLinks = document.getElementById("nav-links");
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", function () {
-            console.log("Hamburger menu clicked"); // Debugging
-            navLinks.classList.toggle("active"); // Toggle menu visibility
-        });
+    hamburgerMenu.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
+    });
 
-        // Close menu when clicking a link
-        document.querySelectorAll(".nav-links a").forEach(link => {
-            link.addEventListener("click", () => {
-                console.log("Menu link clicked"); // Debugging
-                navLinks.classList.remove("active"); // Hide menu after clicking a link
-            });
+    // Close the menu when a navigation link is clicked
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
         });
-    } else {
-        console.error("Error: Menu Toggle or Nav Links not found in DOM.");
-    }
+    });
 });
 

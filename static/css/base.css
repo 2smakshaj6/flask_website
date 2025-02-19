@@ -18,6 +18,7 @@
 /* ================== Global Layout ================== */
 html, body {
     scroll-behavior: smooth;
+    padding-top: 80px; /* Adjust this based on your navbar height */
     width: 100%;
     height: 100%;
     overflow-x: hidden;
